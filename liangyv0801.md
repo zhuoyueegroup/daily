@@ -48,8 +48,6 @@
    		跨域资源的引入，如嵌入到页面中的< script src="...">< /script>、 < img> 、< link>等，但是js不能读写加载的内容。
 
 2、驼峰下划线转换
-
-<script>
         //下划线转换为驼峰
         function toTuo(b) {
             return b.replace(/\_(\w)/g, function (a, letter) {
@@ -71,7 +69,6 @@ return a.replace(/([A-Z])/g, "_$1").toLowerCase();
 
 **浅拷贝**就是拷贝指向对象的指针，即：拷贝出来的目标对象的指针和源对象的指针指向的内存空间是同一块空间。只是一种简单的拷贝，让几个对象公用一个内存。两个对象指向同一个地址，修改其中一个对象的属性，另一个对象相对应的属性也会改变。
 
-```
  var obj1={
             name:"zhangsan",
             age:"15",
@@ -85,7 +82,6 @@ return a.replace(/([A-Z])/g, "_$1").toLowerCase();
         console.log(obj1.age)
         console.log(obj2.language)
         console.log(obj1.language)
-```
 
 **深拷贝**指的是拷贝对象的具体内容，其内容地址是自助分配的，拷贝结束之后，内存中的值完全相同，但是内存的地址是不一样的，两个对象之间互不影响，也互不干涉。两个对象对应两个不同的地址，修改一个对象的属性，不会改变另一个对象的属性。
 
