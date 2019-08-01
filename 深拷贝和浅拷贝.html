@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a=10;
+        function add(){
+            let b=20;
+            return a+b;
+        }
+        console.log(add())
+        // var obj1={
+        //     name:"zhangsan",
+        //     age:"15",
+        //     language :" [1,[2,3],[4,5]]",
+        // }
+        // var obj2=obj1;
+        // obj2.age="20";
+        // obj2.language="[0,2,3,4,5]"
+
+        // console.log(obj2===obj1)
+        // console.log(obj1.age)
+        // console.log(obj2.language)
+        // console.log(obj1.language)
+        // var obj3 = shallowCopy(obj1);
+        // function shallowCopy(src) {
+        //     var dst = {};
+        //     for (var prop in src) {
+        //         if (src.hasOwnProperty(prop)) {
+        //             dst[prop] = src[prop];
+        //         }
+        //     }
+        //     return dst;
+        // }
+        // // obj2.name="liang"
+        // // obj2.name = "lisi";
+        // // obj3.age = "20";
+
+        // // obj2.language[1] = ["二","三"];
+        // // obj3.language[2] = ["四","五"];
+
+        // console.log(obj1===obj3);
+        // console.log(obj1===obj2);
+        // console.log(obj2)
+        // console.log(obj3);
+
+
+        //         // 浅拷贝实现
+        //         function shadowCopy(target, source) {
+        //             if (!source || typeof source !== 'object') {
+        //                 return;
+        //             }
+        //             // 这个方法有点小trick，target一定得事先定义好，不然就不能改变实参了。
+        //             // 具体原因解释可以看参考资料中 JS是值传递还是引用传递
+        //             if (!target || typeof target !== 'object') {
+        //                 return;
+        //             }
+        //             // 这边最好区别一下对象和数组的复制
+        //             for (var key in source) {
+        //                 if (source.hasOwnProperty(key)) {
+        //                     target[key] = source[key];
+        //                 }
+        //             }
+        //         }
+        //         //测试例子
+        //         var arr = [1, 2, 3];
+        //         var arr2 = [];
+        //         shadowCopy(arr2, arr);
+        //         console.log(arr2);
+        //         //[1,2,3]
+
+        //         var today = {
+        //             weather: 'Sunny',
+        //             date: {
+        //                 week: 'Wed'
+        //             }
+        //         }
+
+        //         var tomorrow = {};
+        //         shadowCopy(tomorrow, today);
+        //         console.log(tomorrow);
+        // // Object {weather: "Sunny", date: Object}
+
+
+        // function simpleClone(initalObj) {
+        //     var obj = {};
+        //     for (var i in initalObj) {
+        //         obj[i] = initalObj[i];
+        //     }
+        //     return obj;
+        // }
+
+        // var obj = {
+        //     a: "hello",
+        //     b: {
+        //         a: "world",
+        //         b: 21
+        //     },
+        //     c: ["Bob", "Tom", "Jenny"],
+        //     d: function () {
+        //         alert("hello world");
+        //     }
+        // }
+        // var cloneObj = simpleClone(obj);
+        // console.log(cloneObj === obj)
+        // console.log(cloneObj.b);
+        // console.log(cloneObj.c);
+        // console.log(cloneObj.d);
+
+        // cloneObj.b.a = "changed";
+        // cloneObj.c = [1, 2, 3];
+        // cloneObj.d = function () { alert("changed"); };
+        // console.log(obj.b);
+        // console.log(obj.c);
+        // console.log(obj.d);
+
+
+        // var obj1 = { body: { a: 10 } };
+        // var obj2 = JSON.parse(JSON.stringify(obj1));
+        // obj2.body.a = 20;
+        // console.log(obj1);
+        // // { body: { a: 10 } } <-- 沒被改到
+        // console.log(obj2);
+        // // { body: { a: 20 } }
+        // console.log(obj1 === obj2);
+        // // false
+        // console.log(obj1.body === obj2.body);
+        // false
+    </script>
+</body>
+
+</html>
