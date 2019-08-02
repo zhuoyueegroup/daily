@@ -73,4 +73,4 @@
 
 ​			display: grid;
 ​	 	  grid-template-rows: 200px;/*行：高度*/
-​          grid-template-columns: 100px auto 100px;/*列：宽度*/
+​     grid-template-columns: 100px auto 100px;/*列：宽度*/
