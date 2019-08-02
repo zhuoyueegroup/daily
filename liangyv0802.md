@@ -70,7 +70,6 @@
 6、**Table布局**：给父元素设置：display: table，子元素设置display: table-cell，子元素有一定的宽高。无法设置栏间距
 7、**绝对定位布局**：给父元素设置相对定位，左右子元素设置绝对定位，left:0,right:0,top:0
 8、**网格布局**：
-
 ​			display: grid;
 ​	 	  grid-template-rows: 200px;/*行：高度*/
 ​     grid-template-columns: 100px auto 100px;/*列：宽度*/
