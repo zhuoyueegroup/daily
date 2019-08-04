@@ -1,8 +1,10 @@
 <template>
-  <div class="person-container">这是个人页面
+  <div class="seckill-container">
+    秒杀页面
     <TabBar></TabBar>
   </div>
 </template>
+
 <script>
 import TabBar from '../tabbar/TabBar'
 export default {

@@ -1,5 +1,6 @@
 <template>
-  <div class="person-container">这是个人页面
+  <div class="shopping-container">
+    我是购物车
     <TabBar></TabBar>
   </div>
 </template>
@@ -11,3 +12,4 @@ export default {
   }
 }
 </script>
+

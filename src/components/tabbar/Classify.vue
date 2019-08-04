@@ -1,5 +1,5 @@
 <template>
-  <div class="person-container">这是个人页面
+  <div class="classify-container">分类页面
     <TabBar></TabBar>
   </div>
 </template>

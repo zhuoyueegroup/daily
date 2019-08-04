@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import {store} from './store/store'
-import { Button,Loading } from 'vant';
-Vue.use(Button).use(Loading);
+import { Button,Loading,Tabbar, TabbarItem } from 'vant';
+Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
