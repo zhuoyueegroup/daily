@@ -1,6 +1,6 @@
 <template>
   <div class="seckill-container">
-    秒杀页面
+    秒杀页面123123
     <TabBar></TabBar>
   </div>
 </template>
