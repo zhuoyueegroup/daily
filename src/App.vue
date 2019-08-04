@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <van-loading type="spinner" color="#1989fa" />
-    <van-button class="add" plain hairline type="primary">卓越手机卖场</van-button>
+    <van-button class="add" plain hairline type="primary">卓越乐乐手机卖场</van-button>
     <router-view/>
   </div>
 </template>
