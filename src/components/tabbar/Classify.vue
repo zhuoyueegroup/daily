@@ -156,61 +156,65 @@ export default {
 
 <style lang="less" scoped>
 
-.classify-container{
-  width: 100%;
-  height: 100%;
-  background: #F8F8F8;
+  .classify-container{
+    width: 100%;
+    height: 100%;
+    background: #F8F8F8;
 
-  .search{
-    height: 100px;
-    line-height: 100px;
-    display: flex;
-    align-items: center;
-    background-color: red;
-  }
-  .content{
-    display: flex;
-
-    .brands-list{
-      width: 200px;
-      text-align: center;
-      .brands-item{
-        width: 200px;
-        height: 100px;
-      }
+    .search{
+      height: 100px;
+      line-height: 100px;
+      display: flex;
+      align-items: center;
+      background-color: red;
     }
+    .content{
+      display: flex;
 
-    // 右侧商品信息
-    .goods-list{
-      width: 100%;
-
-      .hot-goods,.new-goods{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .brands-list{
+        width: 200px;
+        text-align: center;
+        .brands-item{
+          width: 200px;
+          height: 100px;
+        }
       }
 
-      //商品信息容器
-      .goods-item{
-        display: flex;
-        flex-wrap: wrap;
-        //商品具体信息
-        .goods{
-          width: 33%;
-          height: 250px;
-          background-color: red;
+      // 右侧商品信息
+      .goods-list{
+        width: 100%;
+
+        .hot-goods,.new-goods{
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin-bottom: 10px;
         }
 
+        //商品信息容器
+        .goods-item{
+          display: flex;
+          flex-wrap: wrap;
+          //商品具体信息
+          .goods{
+            width: 33%;
+            height: 250px;
+            box-sizing: border-box;
+            // margin: 20px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+
+        }
       }
     }
+
+
   }
-
-
-}
 </style>
