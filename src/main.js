@@ -14,7 +14,7 @@ import { Button,Loading,Tabbar, TabbarItem ,Sidebar, SidebarItem ,Search,Icon,Pa
 Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem).use(Sidebar).use(SidebarItem).use(Search).use(Icon).use(Panel).use(Image);
 
 Vue.config.productionTip = false
-
+/*rnrnrn*/ 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
