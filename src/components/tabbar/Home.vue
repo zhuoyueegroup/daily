@@ -1,14 +1,29 @@
 <template>
-    <div class="home-container">
-      这是home
-      <TabBar></TabBar>
-    </div>
+   <div>
+     <home-header></home-header>
+    <tab-bar></tab-bar>
+   </div>
 </template>
+
+
 <script>
 import TabBar from '../tabbar/TabBar'
+import HomeHeader from '../first/Header'
 export default {
-  components:{
-    TabBar
-  }
+    name: "Home",
+    components: {
+      TabBar,
+      HomeHeader
+    },
+
+  
 }
 </script>
+
+<style lang="stylus" scoped>
+
+
+</style>
+
+
+
