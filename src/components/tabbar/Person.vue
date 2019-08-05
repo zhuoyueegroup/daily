@@ -10,7 +10,7 @@
       </div>
       <img src="" alt="">
     </section>
-    <TabBar></TabBar>
+    <TabBar :active="4"></TabBar>
   </div>
 </template>
 <script>

@@ -124,7 +124,7 @@
     </div>
 
     <!-- 底部导航 -->
-    <TabBar></TabBar>
+    <TabBar :active="1"></TabBar>
   </div>
 </template>
 <script>
