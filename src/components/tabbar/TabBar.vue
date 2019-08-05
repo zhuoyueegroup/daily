@@ -24,7 +24,7 @@ export default {
 .tabbar-container{
   .tabbar{
     height: 100px;
-    background-color: pink;
+    // background-color: pink;
   }
 }
 </style>
