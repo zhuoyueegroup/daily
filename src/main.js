@@ -2,10 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+// 导入vue-router
 import router from './router'
+// 导入vuex
 import {store} from './store/store'
+// 导入axios
+import axios from 'axios'
+
+// 按需加载vant组件
 import { Button,Loading,Tabbar, TabbarItem } from 'vant';
 Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
