@@ -14,7 +14,7 @@ import { Button,Loading,Tabbar, TabbarItem } from 'vant';
 Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem);
 
 Vue.config.productionTip = false
-
+/*rnrnrn*/ 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
