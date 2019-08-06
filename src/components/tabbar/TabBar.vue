@@ -39,7 +39,7 @@ export default {
   .tabbar{
     height: 100px;
     .van-tabbar-item--active{
-      color:orange
+      color:#ff8a5c
     }
     // color: blue;
     // background-color: pink;

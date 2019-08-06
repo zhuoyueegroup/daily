@@ -64,6 +64,7 @@ export default {
     font-size: 50px;
     border-radius: 15px;
     margin:80px 5% 0;
+    background-color: #ffb5b5;
   }
   .p-register{
     text-align: right;
