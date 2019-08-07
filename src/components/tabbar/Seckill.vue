@@ -77,7 +77,6 @@
         </div>
       </van-tab>
     </van-tabs>
-
     <TabBar></TabBar>
   </div>
 </template>
