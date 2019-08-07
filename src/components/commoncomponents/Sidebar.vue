@@ -1,7 +1,10 @@
 <template>
+  <div class="sidebar-container">
     <van-sidebar class="brands-list" v-model="activeKey">
       <van-sidebar-item  v-for="item in data" class="brands-item" :key="item.id" :title="item.name" />
     </van-sidebar>
+  </div>
+
 </template>
 <script>
 export default {
@@ -16,10 +19,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.classify-container{
+.sidebar-container{
+  width: 300px;
+  position: relative;
+  overflow: hidden;
   .brands-list{
     width: 200px;
+    position: fixed;
     text-align: center;
+    .van-sidebar-item--select{
+      color:#ff8a5c;
+      border-color: #ff8a5c;
+    }
     .brands-item{
       width: 200px;
       height: 100px;

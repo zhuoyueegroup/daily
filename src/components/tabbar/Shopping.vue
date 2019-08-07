@@ -1,7 +1,7 @@
 <template>
   <div class="shopping-container">
     我是购物车
-    <TabBar></TabBar>
+    <TabBar :active="3"></TabBar>
   </div>
 </template>
 <script>
