@@ -2,7 +2,7 @@
   <div class="person-container">
     <header>
       <p class="p">Hi,欢迎来到卓越手机商城</p>
-      <van-button round type="default" class="login-container" :to="{name:'login'}" >登录/注册</van-button>
+      <van-button round type="default" class="login-button" :to="{name:'login'}" >登录/注册</van-button>
     </header>
     <section>
       <div>
@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="less" scoped>
 header{
-  background-color: hsla(29, 95%, 50%, 0.932);
+  background-color: #ff8a5c;
   overflow: hidden;
   height: 300px;
 
@@ -36,11 +36,11 @@ header{
     margin:100px auto 10px;
   }
 
-  .login-container {
+  .login-button {
     width: 25%;
     height: 70px;;
     border-radius: 35px;
-    background-color: #fff;
+    background-color: #badfdb;
     font-size: 30px;
     color: #000;
     padding: 0;

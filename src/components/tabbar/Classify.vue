@@ -1,9 +1,12 @@
 <template>
   <div class="classify-container">
     <!-- 搜索框 -->
-    <van-search input-align="center" class="search" v-model="value" placeholder="请输入搜索关键词" show-action shape="round">
-      <div slot="action"><van-icon name="comment-o" /></div>
-    </van-search>
+    <div class="search-cotainer">
+      <van-search input-align="center" class="search" v-model="value" placeholder="请输入搜索关键词" show-action shape="round">
+        <div slot="action"><van-icon name="comment-o" /></div>
+      </van-search>
+    </div>
+
 
 
     <div class="content">
@@ -160,14 +163,22 @@ export default {
     width: 100%;
     height: 100%;
     background: #F8F8F8;
-
-    .search{
+    .search-cotainer{
+      z-index: 999;
+      width: 100%;
+      position: relative;
       height: 100px;
-      line-height: 100px;
-      display: flex;
-      align-items: center;
-      background-color: red;
+        .search{
+        position: fixed;
+        height: 100px;
+        width: 100%;
+        line-height: 100px;
+        // display: flex;
+        // align-items: center;
+        background-color: red;
+      }
     }
+
     .content{
       display: flex;
 
@@ -198,12 +209,13 @@ export default {
           //商品具体信息
           .goods{
             width: 33%;
-            height: 250px;
+            height: 300px;
             box-sizing: border-box;
             // margin: 20px;
             padding: 10px;
-            margin: 10px 0;
+            margin: 10px 0px;
             background-color: red;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
