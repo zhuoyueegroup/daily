@@ -1,7 +1,7 @@
 <template>
   <div class="seckill-container">
     秒杀页面123123
-    <TabBar></TabBar>
+    <TabBar :active="2"></TabBar>
   </div>
 </template>
 

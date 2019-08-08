@@ -7,17 +7,23 @@ import Classify from '../components/tabbar/Classify.vue';
 import Seckill from '../components/tabbar/Seckill.vue';
 import Shopping from '../components/tabbar/Shopping.vue';
 import Person from '../components/tabbar/Person.vue';
+import Login from '../components/login/Login.vue';
+import Register from '../components/login/Register.vue';
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+
     {path: '/',redirect:'/home'},
     {path: '/home',name: 'home',component: Home},
     {path:'/classify',name:'classify',component:Classify},
     {path:'/seckill',name:'seckill',component:Seckill},
     {path:'/shopping',name:'shopping',component:Shopping},
     {path:'/person',name:'person',component:Person},
+    {path:'/login',name:'login',component:Login},
+    {path:'/register',name:'register',component:Register},
+
 
   ]
 })
