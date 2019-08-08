@@ -1,15 +1,42 @@
 <template>
   <div class="person-container">
+    <!-- 头部 -->
     <header>
       <p class="p">Hi,欢迎来到卓越手机商城</p>
       <van-button round type="default" class="login-button" :to="{name:'login'}" >登录/注册</van-button>
     </header>
+    <!-- 内容区域 -->
     <section>
-      <div>
-
-      </div>
-      <img src="" alt="">
+      <van-cell class="settings" title="我的订单"  icon="bill" is-link to="index" />
+      <van-grid :column-num="4" class="tools">
+        <van-grid-item
+          icon="clock"
+          text="待收货"
+          to="/"
+        />
+        <van-grid-item
+          icon="cart"
+          text="已收货"
+          to="/"
+        />
+        <van-grid-item
+          icon="coupon"
+          text="评价"
+          to="/"
+        />
+        <van-grid-item
+          icon="chat"
+          text="售后"
+          to="/"
+        />
+      </van-grid>
+      <van-cell class="settings" title="优惠券"  icon="gift-card" is-link to="index" />
+      <van-cell class="settings" title="钱包"  icon="card" is-link to="index" />
+      <van-cell class="settings" title="设置"  icon="setting" is-link to="index" />
+      <van-button type="warning" size="large" round class="exit" >退出账户</van-button>
     </section>
+
+    <!-- 底部导航 -->
     <TabBar :active="4"></TabBar>
   </div>
 </template>
@@ -46,6 +73,39 @@ header{
     padding: 0;
     text-align: center;
     margin: auto 38%;
+  }
+}
+.person-container{
+  section{
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    .tools{
+      height: 200px;
+
+    }
+    .settings{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      border-bottom: 1px solid #e4e4e4;
+      // line-height: 100px;
+      // font-weight: bold;
+      i{
+        font-size: 50px;
+        margin-right: 20px;
+        color: pink;
+      }
+    }
+    .exit{
+      // width: 550px;
+      height: 130px;
+      // margin: 20px 30px 30px 0;
+      // padding: 20px
+    }
   }
 }
 </style>
