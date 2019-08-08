@@ -1,19 +1,35 @@
 <template>
-    <div class="home-container">
-      这是home
-      <TabBar :active="0"></TabBar>
-    </div>
+   <div>
+     <home-header></home-header>
+      <tab-bar></tab-bar>
+      <home-recommend></home-recommend>
+      <home-thank></home-thank>
+   </div>
 </template>
+
+
 <script>
 import TabBar from '../tabbar/TabBar'
+import HomeHeader from '../first/Header'
+import HomeRecommend from '../first/Recommend'
+import HomeThank from '../first/Thank'
 export default {
-  data () {
-    return{
+    name: "Home",
+    components: {
+      TabBar,
+      HomeHeader,
+      HomeRecommend,
+      HomeThank
+    },
 
-    }
-  },
-  components:{
-    TabBar
-  }
+  
 }
 </script>
+
+<style lang="stylus" scoped>
+  
+
+</style>
+
+
+

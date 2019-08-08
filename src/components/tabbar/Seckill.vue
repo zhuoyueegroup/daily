@@ -29,7 +29,7 @@
                 <h4 class="goodstitle">{{item.phonetitle}}</h4>
                 <p class="goodsdesc">{{item.desc}}</p>
                 <span class="goodstag">{{item.tag}}</span>
-                <div class="show-footer">                  
+                <div class="show-footer">
                   <span class="goodsprice">{{item.price}}</span>
                   <span class="goodsorigin-price">{{item.originprice}}</span>
                   <button class="buy-button">马上抢></button>
@@ -66,7 +66,7 @@
                 <h4 class="goodstitle">{{item.phonetitle}}</h4>
                 <p class="goodsdesc">{{item.desc}}</p>
                 <span class="goodstag">{{item.tag}}</span>
-                <div class="show-footer">                  
+                <div class="show-footer">
                   <span class="goodsprice">{{item.price}}</span>
                   <span class="goodsorigin-price">{{item.originprice}}</span>
                   <button class="buy-button">马上抢></button>
@@ -77,7 +77,7 @@
         </div>
       </van-tab>
     </van-tabs>
-    <TabBar></TabBar>
+    <TabBar :active="3"></TabBar>
   </div>
 </template>
 <script>
