@@ -32,7 +32,7 @@
             <!-- <div class="checkbox"><van-checkbox  id="checkbox" v-model="checked" @onclick="checkAll()" checked-color="#ff6633" icon-size="28px">全选</van-checkbox></div> -->
             <label class="bott_num">总数量：{{num}}</label>
             <label class="bott_money">共计：{{money}}</label>
-            <label class="btn_sub" onclick="btn_sub()">结算</label>
+            <router-link to='/settle' class="btn_sub"><label >结算</label></router-link>
         </div>
     </div>
     <!-- 推荐部分 -->
@@ -243,6 +243,7 @@ export default {
   }
   .btn_sub{
     background-color:#ff6633;
+    color:#000;
     border-radius: 5px;
     width: 25%;
     text-align: center;

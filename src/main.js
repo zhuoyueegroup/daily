@@ -10,8 +10,9 @@ import {store} from './store/store'
 import axios from 'axios'
 
 // 按需加载vant组件
-import { Button,Loading,Tabbar, TabbarItem ,Sidebar, SidebarItem ,Search,Icon,Panel,Image,Field,Cell, CellGroup,Card,Tag,Tab, Tabs,CountDown,Checkbox,CheckboxGroup} from 'vant';
-Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem).use(Sidebar).use(SidebarItem).use(Search).use(Icon).use(Panel).use(Image).use(Field).use(Cell).use(CellGroup).use(Card).use(Tag).use(Tab).use(Tabs).use(CountDown).use(Checkbox).use(CheckboxGroup);
+import { Button,Loading,Tabbar, TabbarItem ,Sidebar, SidebarItem ,Search,Icon,Panel,Image,Field,Cell, CellGroup,Card,Tag,Tab, Tabs,CountDown,Checkbox,CheckboxGroup,NavBar, ContactCard, ContactList, ContactEdit, Popup ,RadioGroup, Radio, CouponCell, CouponList } from 'vant';
+Vue.use(Button).use(Loading).use(Tabbar).use(TabbarItem).use(Sidebar).use(SidebarItem).use(Search).use(Icon).use(Panel).use(Image).use(Field).use(Cell).use(CellGroup).use(Card).use(Tag).use(Tab).use(Tabs).use(CountDown).use(Checkbox).use(CheckboxGroup).use(CouponCell).use(CouponList)
+.use(NavBar).use(ContactCard).use(ContactList).use(ContactEdit).use(Popup).use(RadioGroup).use(Radio);
 
 Vue.config.productionTip = false
 /*rnrnrn*/ 

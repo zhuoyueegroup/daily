@@ -80,11 +80,10 @@
     <TabBar></TabBar>
   </div>
 </template>
-
 <script>
 import TabBar from "../tabbar/TabBar";
 export default {
-  data() {
+   data() {
     return {
       time: 60 * 60 * 1000,
       message: [

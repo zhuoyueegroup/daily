@@ -16,6 +16,7 @@
 <script>
 import Register from '../login/Register'
 export default {
+
   data() {
     return {
       username: "",
