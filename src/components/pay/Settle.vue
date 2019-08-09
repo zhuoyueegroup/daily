@@ -2,7 +2,9 @@
   <div>
     <!-- 结算头部 -->
     <div class="settle-header">
-      <router-link class="header-icon" to='/shopping'><van-icon name="arrow-left" size="24px" /></router-link>
+      <router-link class="header-icon" to="/shopping">
+        <van-icon name="arrow-left" size="24px" />
+      </router-link>
       <p class="header-title">结算</p>
     </div>
     <!-- 结算联系人信息栏 -->
@@ -56,38 +58,42 @@
             </span>
             <van-radio slot="right-icon" name="2" icon-size="20px" checked-color="#ff471a" />
           </van-cell>
-          
         </van-cell-group>
       </van-radio-group>
       <div class="coupon">
-              <span> 优惠券</span>
-              <span>2张可用<van-icon name="arrow"  size="15px"/></span>
+        <span>优惠券</span>
+        <span>
+          2张可用
+          <van-icon name="arrow" size="15px" />
+        </span>
       </div>
     </div>
     <!-- 结算商品列表 -->
     <div class="settle-list">
       <li class="goodslist" v-for="(item ,index) of message" :key="index">
-            <div class="show-card">
-              <img class="goodsimg" :src="item.img">
-              <div class="goodsmessage">
-                <span class="goodstitle">{{item.phonetitle}}</span>              
-                <div>
-                  <span class="goodsnum">{{item.tag}}</span>                                
-                  <span class="goodsprice">{{item.price}}</span> 
-                </div>          
-              </div>
+        <div class="show-card">
+          <img class="goodsimg" :src="item.img" />
+          <div class="goodsmessage">
+            <span class="goodstitle">{{item.phonetitle}}</span>
+            <div>
+              <span class="goodsnum">{{item.tag}}</span>
+              <span class="goodsprice">{{item.price}}</span>
             </div>
-        </li>
+          </div>
+        </div>
+      </li>
     </div>
     <!-- 底部结算跳转 -->
     <div class="footer">
       <div class="amount-pay">应付金额：</div>
-      <router-link to='/confirmpay' class="pay"><div >去付款</div></router-link>
+
+      <router-link to="/confirmpay" class="pay">
+        <div>去付款</div>
+      </router-link>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
@@ -104,12 +110,26 @@ export default {
           id: 0
         }
       ],
-       message: [
-        {img:" ../static/productimg/2.jpg",phonetitle: "手机1",price: "1299元",tag:"x1"},
-        {img:" ../static/productimg/3.jpg",phonetitle: "手机2",price: "1599元",tag:"x1"},
-        {img:" ../static/productimg/4.jpg",phonetitle: "手机3",price: "1499元",tag:"x1"},
-        
-        ]
+      message: [
+        {
+          img: " ../static/productimg/2.jpg",
+          phonetitle: "手机1",
+          price: "1299元",
+          tag: "x1"
+        },
+        {
+          img: " ../static/productimg/3.jpg",
+          phonetitle: "手机2",
+          price: "1599元",
+          tag: "x1"
+        },
+        {
+          img: " ../static/productimg/4.jpg",
+          phonetitle: "手机3",
+          price: "1499元",
+          tag: "x1"
+        }
+      ]
     };
   },
 
@@ -247,75 +267,79 @@ export default {
     border-bottom: 2px solid rgb(231, 231, 231);
     padding: 0 20px;
   }
-  .coupon{
+  .coupon {
     line-height: 80px;
     font-size: 35px;
     display: flex;
     justify-content: space-between;
-     padding: 0 20px;
-     .van-icon{
-       margin-top:10px;
-     }
+    padding: 0 20px;
+    .van-icon {
+      margin-top: 10px;
+    }
   }
 }
 //商品列表
-.settle-list{
+.settle-list {
   padding: 0 20px;
-  .goodslist{
-   list-style: none;
-     //商品展示模块
-   .show-card {
-     display: flex;
-     height: 180px;
-     background: rgb(255, 255, 255);
-     border-bottom: 1px solid #ccc;
-     border-top: 1px solid #ccc;
-     position: relative;
-     margin-bottom: 10px;
-     //商品图片模块
-     .goodsimg {
-       width: 30%;
-       height: 180px;
-     }
-     //商品右侧信息显示模块
-     .goodsmessage{
-        width:75%;
+  .goodslist {
+    list-style: none;
+    //商品展示模块
+    .show-card {
+      display: flex;
+      height: 180px;
+      background: rgb(255, 255, 255);
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      position: relative;
+      margin-bottom: 10px;
+      //商品图片模块
+      .goodsimg {
+        width: 30%;
+        height: 180px;
+      }
+      //商品右侧信息显示模块
+      .goodsmessage {
+        width: 75%;
         line-height: 180px;
         display: flex;
         justify-content: space-around;
         //商品标题模块
-        .goodstitle,.goodsnum,.goodsprice {
-          margin:10px;
+        .goodstitle,
+        .goodsnum,
+        .goodsprice {
+          margin: 10px;
           font-size: 40px;
           color: #000;
-         }
-      }     
+        }
+      }
     }
   }
 }
 
-.footer{
-  position:fixed;
+.footer {
+  position: fixed;
   bottom: 0;
   // left: 0;
-  width:100%;
-  height:130px;
+  width: 100%;
+  height: 130px;
   display: flex;
   justify-content: flex-start;
-  .amount-pay{
-    width:65%;
+  .amount-pay {
+    width: 65%;
     background: #fff;
-    line-height:130px;
+    line-height: 130px;
+    margin-left: 10px;
     font-size: 45px;
-    color:#ff6000;
+    color: #ff6000;
     text-align: left;
+    border-top: 1px solid #ccc;
   }
-  .pay{
-    width:35%;
+  .pay {
+    width: 35%;
     background: #ff6000;
-    line-height:130px;
+    line-height: 130px;
     font-size: 45px;
-    color:#fff;
+    color: #fff;
     text-align: center;
   }
 }

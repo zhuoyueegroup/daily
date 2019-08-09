@@ -13,6 +13,7 @@ import Settle from '../components/pay/Settle.vue';
 import ConfirmPay from '../components/pay/ConfirmPay.vue';
 import PaySuccess from '../components/pay/PaySuccess.vue';
 import PayFaliure from '../components/pay/PayFaliure.vue';
+// import SetPassword from '../components/pay/SetPassword.vue';
 
 Vue.use(Router)
 
@@ -31,6 +32,7 @@ export default new Router({
     {path:'/confirmpay',name:'confirmpay',component:ConfirmPay},
     {path:'/paysuccess',name:'paysuccess',component:PaySuccess},
     {path:'/payfaliure',name:'payfaliure',component:PayFaliure},
+    // {path:'/setpassword',name:'setpassword',component:SetPassword},
 
   ]
 })
