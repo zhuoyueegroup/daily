@@ -29,10 +29,10 @@
         </div>
         <!-- 结算部分 -->
         <div class="total">
-            <!-- <div class="checkbox"><van-checkbox  id="checkbox" v-model="checked" @onclick="checkAll()" checked-color="#ff6633" icon-size="28px">全选</van-checkbox></div> -->
+            <div class="checkbox"><van-checkbox  id="checkbox" v-model="checkedAll" checked-color="#ff6633" icon-size="28px">全选</van-checkbox></div>
             <label class="bott_num">总数量：{{num}}</label>
             <label class="bott_money">共计：{{money}}</label>
-            <label class="btn_sub" onclick="btn_sub()">结算</label>
+            <label class="btn_sub" @click="btn_sub()">结算</label>
         </div>
     </div>
     <!-- 推荐部分 -->
@@ -49,7 +49,7 @@ import TabBar from '../tabbar/TabBar'
 export default {
       data(){
         return{
-          // checked:false,
+          checkedAll:false,
           list:[
             {
                 productTitle: '华为P30pro', // 产品名
@@ -89,17 +89,16 @@ export default {
           num: 0, //被选中的商品数量
         }
       },
-      // watch:{
-      //   // 如果checkedAll发生变化这个函数就会执行
-      //   checked:function(){
-      //     if(checked == true){
-      //       var list = list;
-      //       for(var i=0;i<list.length;i++){
-      //         list[index].checked = true;
-      //       }
-      //     }
-      //   }
-      // },
+      watch:{
+        // 如果checkedAll发生变化这个函数就会执行
+        checkedAll:function(){
+            var arr = this.list;
+              for(var i=0;i<arr.length;i++){
+                  arr[i].checked = true;
+            }
+        }
+        // this.list.map(list.item.checked=>list.itemchecked=true);
+      },
       created:function(){
         var price = 0;
         var numb = 0;
@@ -162,6 +161,19 @@ export default {
             list[index].num = num;
           }
           this.hh();
+        },
+
+        // 结算后的商品数据放在了BuyList里边
+        btn_sub:function(){
+            var BuyList = [];
+            var arr = [];
+            arr = this.list;
+            for(var i=0;i<arr.length;i++){
+              if(arr[i].checked == true){
+              BuyList.push(arr[i]);
+              console.log(BuyList);
+            }
+            }
         },
         // checkAll:function(index){
         //     if(checked == true){
