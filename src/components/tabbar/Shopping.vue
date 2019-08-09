@@ -4,9 +4,11 @@
     <div class="head">
       <span>返回</span>
       <span>购物车</span>
-      <span>管理</span>
+      <span @click="Show">{{manage[admin]}}</span>
     </div>
-
+    <div id="remove" :class="{'show':isShow}" >
+      <button class="isShow"  @click="delected">删除</button>
+    </div>
 
     <!-- 主体部分 -->
     <div class="content">
@@ -29,10 +31,10 @@
         </div>
         <!-- 结算部分 -->
         <div class="total">
-            <div class="checkbox"><van-checkbox  id="checkbox" v-model="checkedAll" checked-color="#ff6633" icon-size="28px">全选</van-checkbox></div>
+            <div class="checkAll"><van-checkbox v-model="checkedAll" checked-color="#ff6633" icon-size="28px">全选</van-checkbox></div>
             <label class="bott_num">总数量：{{num}}</label>
             <label class="bott_money">共计：{{money}}</label>
-            <label class="btn_sub" @click="btn_sub()">结算</label>
+            <router-link to='/settle' class="btn_sub"><label >结算</label></router-link>
         </div>
     </div>
     <!-- 推荐部分 -->
@@ -49,7 +51,10 @@ import TabBar from '../tabbar/TabBar'
 export default {
       data(){
         return{
+          isShow:true,
           checkedAll:false,
+          manage:["管理","完成"],
+          admin:0,
           list:[
             {
                 productTitle: '华为P30pro', // 产品名
@@ -91,13 +96,10 @@ export default {
       },
       watch:{
         // 如果checkedAll发生变化这个函数就会执行
-        checkedAll:function(){
-            var arr = this.list;
-              for(var i=0;i<arr.length;i++){
-                  arr[i].checked = true;
-            }
+        checkedAll:function(old){//watch自带两个参数，改变前(new)的和改变后(old)
+            this.list.map(item =>item.checked=old);
+            this.hh();
         }
-        // this.list.map(list.item.checked=>list.itemchecked=true);
       },
       created:function(){
         var price = 0;
@@ -175,14 +177,22 @@ export default {
             }
             }
         },
-        // checkAll:function(index){
-        //     if(checked == true){
-        //     var list = list;
-        //     for(var i=0;i<list.length;i++){
-        //     list[index].checked = true;
-        //     }
-        //   }
-        // }
+        Show:function(){
+          this.admin = this.admin == 0 ? 1 : 0;
+          this.isShow  = !this.isShow;
+        },
+        // 点击删除，删除购物车里的元素，并打印在控制台上
+        delected:function(){
+          var delList =[];
+           delList=this.list;
+          for(var i=0;i<delList.length;i++){
+            if(delList[i].checked){
+              // this.item.parent().remove();
+              delList.splice(i,1);
+              console.log(delList)
+            }
+          }
+        },
       }
 }
 </script>
@@ -255,9 +265,12 @@ export default {
   }
   .btn_sub{
     background-color:#ff6633;
+    color:#000;
     border-radius: 5px;
     width: 25%;
     text-align: center;
+    font-weight: 600;
+    color:white;
   }
   .recommend{
     margin: 40px 0px;
@@ -291,6 +304,29 @@ export default {
   label{
     font-size: 50px;
     /* border: 1px solid red; */
+  }
+  .checkAll{
+      margin:auto 0;
+  }
+  #remove{
+    height: 100px;
+    width: 100%;
+    position:relative;
+  }
+  #remove button{
+    border:none;
+    background-color:#ff6633 ;
+    width: 20%;
+    height: 90%;
+    border-radius: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-weight: 600;
+    color:white;
+  }
+  .show{
+    display: none;
   }
 </style>
 
