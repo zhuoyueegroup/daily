@@ -23,50 +23,11 @@
           <span class="title">热卖</span>
 
           <div class="goods-item">
-            <div class="goods">
+
+            <router-link tag="div" :to="{name:'goodsdetail'}" class="goods" v-for="item in goods" :key="item.id">
               <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
-            <div class="goods">
-              <van-image width="100%" height="100%" ></van-image>
-              <span>苹果x</span>
-            </div>
+              <span>{{item.name}}</span>
+            </router-link>
           </div>
         </div>
 
@@ -146,6 +107,13 @@ export default {
         {id:'06',name:'oppo'},
         {id:'07',name:'魅族'},
       ],
+      goods:[
+        {name:'小米x',id:'mi01'},
+        {name:'小米x',id:'mi02'},
+        {name:'小米x',id:'mi03'},
+        {name:'小米x',id:'mi04'},
+
+      ],
       activeKey:0
     }
   },
@@ -181,7 +149,7 @@ export default {
 
     .content{
       display: flex;
-
+      margin-bottom: 100px;
       .brands-list{
         width: 200px;
         text-align: center;
@@ -194,7 +162,6 @@ export default {
       // 右侧商品信息
       .goods-list{
         width: 100%;
-
         .hot-goods,.new-goods{
           display: flex;
           flex-direction: column;
@@ -204,6 +171,7 @@ export default {
 
         //商品信息容器
         .goods-item{
+          width: 100%;
           display: flex;
           flex-wrap: wrap;
           //商品具体信息
@@ -221,6 +189,7 @@ export default {
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
+
           }
 
         }

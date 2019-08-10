@@ -77,7 +77,7 @@
         </div>
       </van-tab>
     </van-tabs>
-    <TabBar :active="3"></TabBar>
+    <TabBar :active="2"></TabBar>
   </div>
 </template>
 <script>

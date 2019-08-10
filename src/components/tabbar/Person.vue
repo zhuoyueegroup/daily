@@ -8,6 +8,7 @@
     <!-- 内容区域 -->
     <section>
       <van-cell class="settings" title="我的订单"  icon="bill" is-link to="index" />
+
       <van-grid :column-num="4" class="tools">
         <van-grid-item
           icon="clock"
@@ -24,16 +25,16 @@
           text="评价"
           to="/"
         />
-        <van-grid-item
-          icon="chat"
+        <van-grid-item  icon="chat"
           text="售后"
           to="/"
         />
       </van-grid>
+
       <van-cell class="settings" title="优惠券"  icon="gift-card" is-link to="index" />
       <van-cell class="settings" title="钱包"  icon="card" is-link to="index" />
       <van-cell class="settings" title="设置"  icon="setting" is-link to="index" />
-      <van-button type="warning" size="large" round class="exit" >退出账户</van-button>
+      <van-button type="warning" size="normal" round class="exit" >退出账户</van-button>
     </section>
 
     <!-- 底部导航 -->
@@ -80,9 +81,11 @@ header{
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    // align-items: center;
+    align-items: center;
     .tools{
+      width: 100%;
       height: 200px;
+      // display: none;
 
     }
     .settings{
@@ -101,8 +104,9 @@ header{
       }
     }
     .exit{
-      // width: 550px;
-      height: 130px;
+      margin-top: 50px;
+      width: 550px;
+      height: 100px;
       // margin: 20px 30px 30px 0;
       // padding: 20px
     }

@@ -1,9 +1,9 @@
 <template>
-   <div>
+   <div class="home-container">
      <home-header></home-header>
-      <tab-bar></tab-bar>
       <home-recommend></home-recommend>
       <home-thank></home-thank>
+      <tab-bar></tab-bar>
    </div>
 </template>
 
@@ -22,12 +22,12 @@ export default {
       HomeThank
     },
 
-  
+
 }
 </script>
 
 <style lang="stylus" scoped>
-  
+
 
 </style>
 

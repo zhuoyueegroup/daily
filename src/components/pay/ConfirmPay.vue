@@ -2,7 +2,7 @@
   <div>
       <!-- 确认支付头部 -->
     <div class="confirm-header">
-        <router-link class="header-icon" to="/shopping">
+        <router-link class="header-icon" :to="{name:'shopping'}">
             <span>取消</span>
         </router-link>
         <p class="header-title">确认支付</p>
@@ -68,7 +68,7 @@ export default {
   justify-content: flex-start;
   background: #262626;
   border-bottom: 2px solid rgb(236, 235, 235);
-    
+
   .header-title {
     margin: 20px 30% 20px 25%;
     font-size: 50px;
