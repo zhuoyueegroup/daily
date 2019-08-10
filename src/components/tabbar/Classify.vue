@@ -7,7 +7,9 @@
       </van-search>
     </div>
 
-
+    <div class="search-detail" v-show="flag"   ref="search-input">
+      1231232312312312
+    </div>
 
     <div class="content">
 
@@ -114,7 +116,8 @@ export default {
         {name:'小米x',id:'mi04'},
 
       ],
-      activeKey:0
+      activeKey:0,
+      flag:false
     }
   },
   components:{
@@ -146,7 +149,14 @@ export default {
         background-color: red;
       }
     }
-
+    .search-detail{
+      position: absolute;
+      top: 100px;
+      background: red;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
     .content{
       display: flex;
       margin-bottom: 100px;
