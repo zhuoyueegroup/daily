@@ -184,14 +184,10 @@ export default {
         // 点击删除，删除购物车里的元素，并打印在控制台上
         delected:function(){
           var delList =[];
-           delList=this.list;
-          for(var i=0;i<delList.length;i++){
-            if(delList[i].checked){
-              // this.item.parent().remove();
-              delList.splice(i,1);
-              console.log(delList)
-            }
-          }
+          delList=this.list;
+          var arr = [];
+          arr = delList.filter(item =>item.checked==true);
+          delList.splice(arr.item,arr.length);
         },
       }
 }

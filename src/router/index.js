@@ -13,8 +13,12 @@ import Settle from '../components/pay/Settle.vue';
 import ConfirmPay from '../components/pay/ConfirmPay.vue';
 import PaySuccess from '../components/pay/PaySuccess.vue';
 import PayFaliure from '../components/pay/PayFaliure.vue';
+<<<<<<< HEAD
 import GoodsDetail from '../components/goods/GoodsDetail.vue';
 // import SetPassword from '../components/pay/SetPassword.vue';
+=======
+
+>>>>>>> 9420c56bd847faa8f59b18688738c0dae5ff564f
 
 Vue.use(Router)
 
